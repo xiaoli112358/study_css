@@ -1,0 +1,45 @@
+<!--浮动会产生问题，当我们添加第三个box的时候看不到效果-->
+<!--解决方案3：
+    将box3放到div外面，父级元素添加伪元素-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper{
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #666;
+            /*overflow: hidden;!*超出父级元素的内容会被隐藏*!*/
+        }
+        .wrapper:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .box1,.box2,.box3{
+            width: 200px;
+            height: 150px;
+        }
+        .box1{
+            background: red;
+            float: left;
+        }
+        .box2{
+            background: green;
+            float: right;
+        }
+        .box3{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="box1">box1</div><!--div是块级元素，会独占一行-->
+    <div class="box2">box2</div>
+</div>
+<div class="box3">box3</div>
+</body>
+</html>

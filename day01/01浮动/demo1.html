@@ -1,0 +1,34 @@
+<!--浮动的目的(使用场景就是把块级元素排在一行上)-->
+<!--原理：浮动会脱离文档流，不使用标准流，所以下面的例子当加了float后只能看到最上面的实线-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper{
+            width: 600px;
+            /*margin: 0 auto;*/
+            border: 1px solid #666;
+        }
+        .box1,.box2{
+            width: 200px;
+            height: 150px;
+        }
+        .box1{
+            background: red;
+            float: left;
+        }
+        .box2{
+            background: green;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box1"></div><!--div是块级元素，会独占一行-->
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

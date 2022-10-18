@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .swiper {
+            width: 600px;
+            /*height: 250px;*//*开发中不设置高度，让它自己往开撑*/
+            padding: 20px;/*内边距*/
+            border: 1px solid #666666;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .head {
+            float: left;
+
+            margin-right: 20px;/*外边距*/
+        }
+
+        .img {
+            width: 200px;
+            height: 300px;
+            border: 1px solid #666666;
+            text-align: center;/*文字居中*/
+            /*垂直居中*/
+            display: table-cell;
+            vertical-align: middle;
+            background: #ccc;
+
+        }
+
+        .discribe {
+            width: 340px;
+            height: 290px;
+            border: 1px solid #666666;
+            float: left;
+            /*给字体添加内边距*/
+           padding: 10px 0 0 20px;/*上 右 下 左*/
+        }
+
+        .name {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper">
+    <div class="head">
+        <div class="img">头像</div>
+        <div class="name">姓名</div>
+    </div>
+    <div class="discribe">自我描述</div>
+</div>
+</body>
+</html>
