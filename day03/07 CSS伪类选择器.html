@@ -1,0 +1,59 @@
+<!--CSS伪类选择器
+    伪类：专门用来表示元素的一种特殊状态。
+    常用伪类选择器：
+        1)a标签的伪类：
+            :link/:visited/:hover/:active
+        2):focus 获得焦点
+        3):first-child/:last-child/:nth-child(number)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS伪类选择器</title>
+    <style>
+        a:link{/*这里的:link可以省略*/
+            /*初始颜色*/
+            color:red;
+        }
+        a:visited{
+            /*被访问过以后*/
+            color:green;
+        }
+        a:hover{
+            /*鼠标经过的时候*/
+            color:yellow;
+        }
+        a:active{
+            /*当被点击的时候*/
+            color: blue;
+        }
+
+        input:focus{
+            outline: 1px solid #f00;
+        }
+
+        ul li:first-child{
+            /*鼠标聚焦的时候*/
+            color: #ff1299;
+        }
+        ul li:last-child{
+            color: #38ff24;
+        }
+        ul li:nth-child(2){/*选择第二个*/
+            color: #2c3cff;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">单击我跳转</a>
+
+    <input type="text">
+
+    <ul>
+        <li>aaaa</li>
+        <li>aaaa</li>
+        <li>aaaa</li>
+        <li>aaaa</li>
+    </ul>
+</body>
+</html>
